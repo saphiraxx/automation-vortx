@@ -21,6 +21,7 @@
     "step_definitions": "cypress/support/steps"
   },
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.5.1",
     "cypress": "^7.3.0"
   },
   "dependencies": {
