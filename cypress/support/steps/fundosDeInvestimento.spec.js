@@ -14,7 +14,7 @@ When(`acessa o menu Investidor e seleciona a funcionalidade Fundos de investimen
     fundosDeInvestimento.accessFunctionality();
 })
 
-Then(`seleciona o primerio Fundo da tabela, guarda as informações da Dashboard em um arquivo`, () => {
+Then(`seleciona o primerio Fundo da tabela`, () => {
     fundosDeInvestimento.accessFirstOption();
 })
 

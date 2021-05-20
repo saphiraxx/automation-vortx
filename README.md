@@ -52,6 +52,33 @@ $ npm run cy:chrome
 $ npm run cy:firefox
 ```
 
+## Como rodar os testes e gerar o relatório Allure Reports
+
+> rodar os testes com o comando:
+```bash
+$  npm run cy:allure
+```
+
+> gerar o relatório em HTML:
+```bash
+$  npm run allure:generate
+```
+
+> para abrir o relatório:
+```bash
+$  npm run allure:open
+```
+
+> para excluir as pastar geradas pelo Allure:
+```bash
+$  npm run allure:clear
+```
+
+> para excluir as pastas, rodar o teste e gerar o relatório HTML, use este comando:
+```bash
+$  npm run test
+```
+
 ---
 
 ## Licença
