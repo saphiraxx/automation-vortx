@@ -46,21 +46,24 @@ class fundosDeInvestimentoPage {
 
     accessDocuments() {
         this.getAbaDocumentos()
-        this.getButtonCota()
+        this.getButtonCotaDataIncorreta()
+        this.getButtonCotaDataCorreta()
         
     }
 
     getAbaDocumentos() {
-        cy.get(el.documentos()).contains('Documentos')
+        cy.get(el.documentos())
+            .contains('Documentos')
             .click()
-        cy.get(el.segundoArquivo()).contains('Demonstração Financeira')
+        cy.get(el.segundoArquivo())
+            .contains('Demonstração Financeira')
             .click()
         cy.contains('FII - XP LOG - 26502794 - DF - 20191231.pdf')
             .click()
             
     }
 
-    getButtonCota() {
+    getButtonCotaDataIncorreta() {
         cy.get(el.buttonCota())
             .click()
         cy.get(el.dataInicio())  
@@ -72,6 +75,32 @@ class fundosDeInvestimentoPage {
         cy.get(el.day10())
             .click()
         cy.get(el.buttonAtualizar())
+        cy.get(el.mensagemDataIncorreta())
+            .contains('Não há cotas cadastradas no dia')
+        cy.get(el.closeModal())
+            .click()
+                    
+    }
+
+    getButtonCotaDataCorreta() {
+        cy.get(el.buttonCota())
+            .click()
+        cy.get(el.dataInicio())  
+            .click()  
+        cy.get(el.day12())
+            .click()
+        cy.get(el.dataFinal())  
+            .click()  
+        cy.get(el.day13())
+            .click()
+        cy.get(el.buttonAtualizar())
+            .click()
+        cy.contains('FII XP LOG')
+        cy.get(el.buttonExport())
+            .click()
+        cy.get(el.exportPDF())
+            .click()
+        cy.get(el.closeModal())
             .click()
                     
     }
