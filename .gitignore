@@ -331,9 +331,9 @@ cache/twig/
 
 # Anothers
 .idea
-cypress.env.json
 cypress/screenshots/
 cypress/videos/
+cypress/downloads/
 node_modules/
 temp/
 cypress/reports/
