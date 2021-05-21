@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:headless": "cypress run",
     "cy:run": "cypress run --spec cypress/integration/*.feature",
     "cy:build:run": "npm run simple_build && cypress run --spec cypress/integration/*.feature",
     "clean": "rm -rf ./node_modules && rm -rf ./cypress/screenshots",
