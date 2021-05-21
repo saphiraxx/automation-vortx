@@ -52,7 +52,7 @@ $ npm run cy:chrome
 $ npm run cy:firefox
 ```
 
-## Como rodar os testes e gerar o relatório Allure Reports
+## Como rodar os testes gerando relatório Allure Reports
 
 > rodar os testes com o comando:
 ```bash
