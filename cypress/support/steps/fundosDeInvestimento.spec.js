@@ -18,6 +18,26 @@ Then(`seleciona o primerio Fundo da tabela`, () => {
     fundosDeInvestimento.accessFirstOption();
 })
 
-And(`acessa a aba de Documentos e realiza o download do segundo arquivo, valida o botão de Cota`, () => {
+Then(`não há cotas cadastradas nesse período`, () => {
+    fundosDeInvestimento.validacaoCotaNaoCadastrada();
+})
+
+Then(`realizo a exportação do arquivo`, () => {
+    fundosDeInvestimento.exportCota();
+})
+
+And(`acessa a aba de Documentos e realiza o download do segundo arquivo`, () => {
     fundosDeInvestimento.accessDocuments();
+})
+
+And(`seleciono o primeiro Fundo da tabela`, () => {
+    fundosDeInvestimento.accessFirstOption();
+})
+
+And(`informo data final menor que a data inicial da Cota`, () => {
+    fundosDeInvestimento.pesquisarCotaDataIncorreta();
+})
+
+And(`informo data final maior que a data inicial da Cota`, () => {
+    fundosDeInvestimento.getButtonCotaDataCorreta();
 })

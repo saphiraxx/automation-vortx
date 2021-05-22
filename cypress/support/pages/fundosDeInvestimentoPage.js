@@ -45,13 +45,6 @@ class fundosDeInvestimentoPage {
     }
 
     accessDocuments() {
-        this.getAbaDocumentos()
-        this.getButtonCotaDataIncorreta()
-        this.getButtonCotaDataCorreta()
-        
-    }
-
-    getAbaDocumentos() {
         cy.get(el.documentos())
             .contains('Documentos')
             .click()
@@ -63,7 +56,7 @@ class fundosDeInvestimentoPage {
             
     }
 
-    getButtonCotaDataIncorreta() {
+    pesquisarCotaDataIncorreta() {
         cy.get(el.buttonCota())
             .click()
         cy.get(el.dataInicio())  
@@ -75,8 +68,11 @@ class fundosDeInvestimentoPage {
         cy.get(el.day10())
             .click()
         cy.get(el.buttonAtualizar())
+    }
+
+    validacaoCotaNaoCadastrada() {
         cy.get(el.mensagemDataIncorreta())
-            .contains('Não há cotas cadastradas no dia')
+            .should('include.text','Não há cotas cadastradas no dia')
         cy.get(el.closeModal())
             .click()
                     
@@ -95,6 +91,10 @@ class fundosDeInvestimentoPage {
             .click()
         cy.get(el.buttonAtualizar())
             .click()
+
+    }
+
+    exportCota() {            
         cy.contains('FII XP LOG')
         cy.get(el.buttonExport())
             .click()
