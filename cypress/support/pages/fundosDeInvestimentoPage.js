@@ -4,47 +4,47 @@ import fundosDeInvestimentoElements from '../pages/elements/fundosDeInvestimento
 const el = new fundosDeInvestimentoElements
 class fundosDeInvestimentoPage {
 
-    accessFunctionality() {
-        this.getInvestidor()
-        this.getFundosDeInvestimento()
+    acessarFuncionalidade() {
+        this.Investidor()
+        this.FundosDeInvestimento()
         
     }
 
-    getInvestidor() {
+    Investidor() {
         cy.wait(1000)
-        cy.get(el.acceptCookies())
+        cy.get(el.aceitarCookies())
             .click()
-        cy.get(el.buttonInvestidor())
+        cy.get(el.botaoInvestidor())
             .click()
             
     }
 
-    getFundosDeInvestimento() {
-        cy.get(el.buttonFundosDeInvestimento())
+    FundosDeInvestimento() {
+        cy.get(el.botaoFundosDeInvestimento())
             .click()
             
     }
   
-    accessFirstOption() {
-        this.getPrimeiroFundo()
-        this.saveDashboard()
+    acessarPrimeiraOpcao() {
+        this.acessarPrimeiroFundo()
+        this.salvarDashboard()
         
     }
 
-    getPrimeiroFundo() {
+    acessarPrimeiroFundo() {
         cy.wait(1000)
         cy.get(el.primeiroFundo())
             .click()
             
     }
 
-    saveDashboard() {
+    salvarDashboard() {
         cy.wait(3000)
         cy.screenshot('save-dashboard')     
 
     }
 
-    accessDocuments() {
+    acessarDocumentos() {
         cy.get(el.documentos())
             .contains('Documentos')
             .click()
@@ -57,50 +57,50 @@ class fundosDeInvestimentoPage {
     }
 
     pesquisarCotaDataIncorreta() {
-        cy.get(el.buttonCota())
+        cy.get(el.botaoCota())
             .click()
         cy.get(el.dataInicio())  
             .click()  
-        cy.get(el.day11())
+        cy.get(el.dia11())
             .click()
         cy.get(el.dataFinal())  
             .click()  
-        cy.get(el.day10())
+        cy.get(el.dia10())
             .click()
-        cy.get(el.buttonAtualizar())
+        cy.get(el.botaoAtualizar())
     }
 
     validacaoCotaNaoCadastrada() {
         cy.get(el.mensagemDataIncorreta())
             .should('include.text','Não há cotas cadastradas no dia')
-        cy.get(el.closeModal())
+        cy.get(el.fecharModal())
             .click()
                     
     }
 
-    getButtonCotaDataCorreta() {
-        cy.get(el.buttonCota())
+    pesquisarCotaDataCorreta() {
+        cy.get(el.botaoCota())
             .click()
         cy.get(el.dataInicio())  
             .click()  
-        cy.get(el.day12())
+        cy.get(el.dia12())
             .click()
         cy.get(el.dataFinal())  
             .click()  
-        cy.get(el.day13())
+        cy.get(el.dia13())
             .click()
-        cy.get(el.buttonAtualizar())
+        cy.get(el.botaoAtualizar())
             .click()
 
     }
 
-    exportCota() {            
+    exportarCota() {            
         cy.contains('FII XP LOG')
-        cy.get(el.buttonExport())
+        cy.get(el.botaoExport())
             .click()
-        cy.get(el.exportPDF())
+        cy.get(el.exportarPDF())
             .click()
-        cy.get(el.closeModal())
+        cy.get(el.fecharModal())
             .click()
                     
     }

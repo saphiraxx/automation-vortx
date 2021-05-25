@@ -11,11 +11,11 @@ beforeEach(() => {
 })
 
 When(`acessa o menu Investidor e seleciona a funcionalidade Fundos de investimento`, () => {
-    fundosDeInvestimento.accessFunctionality();
+    fundosDeInvestimento.acessarFuncionalidade();
 })
 
 Then(`seleciona o primerio Fundo da tabela`, () => {
-    fundosDeInvestimento.accessFirstOption();
+    fundosDeInvestimento.acessarPrimeiraOpcao();
 })
 
 Then(`não há cotas cadastradas nesse período`, () => {
@@ -23,15 +23,15 @@ Then(`não há cotas cadastradas nesse período`, () => {
 })
 
 Then(`realizo a exportação do arquivo`, () => {
-    fundosDeInvestimento.exportCota();
+    fundosDeInvestimento.exportarCota();
 })
 
 And(`acessa a aba de Documentos e realiza o download do segundo arquivo`, () => {
-    fundosDeInvestimento.accessDocuments();
+    fundosDeInvestimento.acessarDocumentos();
 })
 
 And(`seleciono o primeiro Fundo da tabela`, () => {
-    fundosDeInvestimento.accessFirstOption();
+    fundosDeInvestimento.acessarPrimeiraOpcao();
 })
 
 And(`informo data final menor que a data inicial da Cota`, () => {
@@ -39,5 +39,5 @@ And(`informo data final menor que a data inicial da Cota`, () => {
 })
 
 And(`informo data final maior que a data inicial da Cota`, () => {
-    fundosDeInvestimento.getButtonCotaDataCorreta();
+    fundosDeInvestimento.pesquisarCotaDataCorreta();
 })
