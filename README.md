@@ -1,6 +1,6 @@
-# showMeTheCode_Vórtx 
+# automation-vortx 
 
-Avaliação Técnica da Vórtx.
+Automação do site da Vórtx.
 
 ## Índice
 
@@ -21,9 +21,12 @@ Avaliação Técnica da Vórtx.
 ## Configuração
 
 Configuração do repositório.
-> abrir o repositório em sua IDE  (recomendo o VSCode)
+> clonar repositório
+```bash
+$ git clone https://github.com/saphiraxx/learning-cypress-cucumber.git
+```
 
-Após abrir o repositório:
+Após clonar o repositório:
 > instalar dependências
 ```bash
 $ npm ci
