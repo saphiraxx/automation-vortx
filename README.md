@@ -1,6 +1,6 @@
-# showMeTheCode_Vórtx 
+# automation-vortx 
 
-Avaliação Técnica da Vórtx.
+Automação do site da Vórtx.
 
 ## Índice
 
@@ -21,9 +21,12 @@ Avaliação Técnica da Vórtx.
 ## Configuração
 
 Configuração do repositório.
-> abrir o repositório em sua IDE  (recomendo o VSCode)
+> clonar repositório
+```bash
+$ git clone https://github.com/saphiraxx/learning-cypress-cucumber.git
+```
 
-Após abrir o repositório:
+Após clonar o repositório:
 > instalar dependências
 ```bash
 $ npm ci
@@ -50,6 +53,33 @@ $ npm run cy:chrome
 > rodar os testes no firefox
 ```bash
 $ npm run cy:firefox
+```
+
+## Como rodar os testes gerando relatório Allure Reports
+
+> rodar os testes com o comando:
+```bash
+$  npm run cy:allure
+```
+
+> gerar o relatório em HTML:
+```bash
+$  npm run allure:generate
+```
+
+> para abrir o relatório:
+```bash
+$  npm run allure:open
+```
+
+> para excluir as pastar geradas pelo Allure:
+```bash
+$  npm run allure:clear
+```
+
+> para excluir as pastas, rodar o teste e gerar o relatório HTML, use este comando:
+```bash
+$  npm run test
 ```
 
 ---
