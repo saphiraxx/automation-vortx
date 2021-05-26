@@ -23,7 +23,7 @@ Automação do site da Vórtx.
 Configuração do repositório.
 > clonar repositório
 ```bash
-$ git clone https://github.com/saphiraxx/learning-cypress-cucumber.git
+$ git clone https://github.com/saphiraxx/automation-vortx.git
 ```
 
 Após clonar o repositório:
